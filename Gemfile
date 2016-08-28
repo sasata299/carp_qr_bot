@@ -7,6 +7,7 @@ gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'faraday'
 gem 'puma', '~> 3.0'
 
+gem 'twitter'
 gem 'dotenv-rails'
 
 group :development, :test do
