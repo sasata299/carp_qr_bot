@@ -10,7 +10,7 @@ class Tweet
   end
 
   def status
-    if name
+    if name.present?
       "【#{inning}】【#{score}】#{name}が#{detail}"
     else
       "【#{inning}】【#{score}】#{detail}"
