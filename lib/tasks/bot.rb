@@ -18,6 +18,8 @@ class Tasks::Bot
       end
 
       if response['result']
+        @client.update("試合終了\n\n#{response['result']}")
+        @conn.put("/result/#{response['game_date']}")
       end
     end
 
