@@ -7,7 +7,7 @@ class Tasks::Bot
     def tweet
       setup
 
-      response = JSON.parse @conn.get('/score_reports').body
+      response = JSON.parse @conn.get("/score_reports/#{Date.today}").body
 
       response['score_reports'].each do |score_report|
         tweet = Tweet.new(score_report)
