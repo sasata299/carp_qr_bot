@@ -18,6 +18,7 @@ class Tasks::Bot
       end
 
       if response['result']
+        response['result'].gsub!(/DeNA/, '横浜　　') # 表示が崩れちゃうので無理やり、、
         @client.update("試合終了\n\n#{response['result']}")
         @conn.put("/result/#{response['game_date']}")
       end
